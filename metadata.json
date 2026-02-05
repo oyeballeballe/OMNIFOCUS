@@ -1,0 +1,5 @@
+{
+  "name": "OMNIFOCUS",
+  "description": "A robust, local-first stopwatch for tracking study sessions. Features offline persistence, subject categorization, and daily progress tracking.",
+  "requestFramePermissions": []
+}
