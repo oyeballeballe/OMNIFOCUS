@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenerativeAI } from '@google/generative-ai';
 import { Send, Sparkles, GraduationCap, Calendar, Plus, Trash2, BookOpen, Bot, Clock, UserCog, Check, Brain, Zap, Coffee, UserPen, X, Save, MessageSquare, Sun, Moon, Sunset, Quote } from 'lucide-react';
 import { Subject, Exam, ChatMessage, isHexColor } from '../types';
 import { dbService } from '../services/db';
