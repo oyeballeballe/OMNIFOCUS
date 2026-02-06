@@ -120,8 +120,10 @@ useEffect(() => {
     }
   }, []);
 
+  useEffect(() => {
     loadData();
     updateTimeOfDay();
+  }, []);
     
     // Load Custom Personalities
     const savedCustom = localStorage.getItem('omni_custom_personas');
