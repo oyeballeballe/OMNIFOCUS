@@ -4,7 +4,7 @@ import { Send, Sparkles, GraduationCap, Calendar, Plus, Trash2, BookOpen, Bot, C
 import { Subject, Exam, ChatMessage, isHexColor } from '../types';
 import { dbService } from '../services/db';
 import { useTheme } from '../contexts/ThemeContext';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion'; 
 
 interface AIAssistantProps {
   subjects: Subject[];
