@@ -109,7 +109,7 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ subjects, currentSubje
   const [newExamDate, setNewExamDate] = useState('');
   const [newExamTopics, setNewExamTopics] = useState('');
 
-  const [aiClient, setAiClient] = useState<GoogleGenAI | null>(null);
+  const [aiClient, setAiClient] = useState<any | null>(null);
 
   const { accent } = useTheme();
 
