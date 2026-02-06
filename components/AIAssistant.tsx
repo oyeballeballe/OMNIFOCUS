@@ -113,10 +113,12 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ subjects, currentSubje
 
   const { accent } = useTheme();
 
-  useEffect(() => {
-    if (process.env.API_KEY) {
-        setAiClient(new GoogleGenAI({ apiKey: process.env.API_KEY }));
+useEffect(() => {
+    const key = import.meta.env.VITE_GEMINI_API_KEY || process.env.VITE_GEMINI_API_KEY;
+    if (key) {
+      setAiClient(new GoogleGenerativeAI(key));
     }
+  }, []);
 
     loadData();
     updateTimeOfDay();
