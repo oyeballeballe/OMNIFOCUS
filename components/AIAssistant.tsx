@@ -142,11 +142,10 @@ useEffect(() => {
     } else {
         setShowSelector(true);
     }
-
-    const interval = setInterval(updateTimeOfDay, 60000); // Update every minute
+   useEffect(() => {
+    const interval = setInterval(updateTimeOfDay, 60000);
     return () => clearInterval(interval);
   }, []);
-
   // Generate quote if no exams
   useEffect(() => {
      if (exams.length === 0) {
