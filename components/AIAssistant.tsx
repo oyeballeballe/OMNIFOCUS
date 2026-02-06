@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { GoogleGenerativeAI } from "@google/genai";
+import { GoogleGenAI } from "@google/genai";
 import { Send, Sparkles, GraduationCap, Calendar, Plus, Trash2, BookOpen, Bot, Clock, UserCog, Check, Brain, Zap, Coffee, UserPen, X, Save, MessageSquare, Sun, Moon, Sunset, Quote } from 'lucide-react';
 import { Subject, Exam, ChatMessage, isHexColor } from '../types';
 import { dbService } from '../services/db';
@@ -109,14 +109,14 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ subjects, currentSubje
   const [newExamDate, setNewExamDate] = useState('');
   const [newExamTopics, setNewExamTopics] = useState('');
 
-  const [aiClient, setAiClient] = useState<any | null>(null);
+  const [aiClient, setAiClient] = useState<GoogleGenAI | null>(null);
 
   const { accent } = useTheme();
 
 useEffect(() => {
     const key = import.meta.env.VITE_GEMINI_API_KEY || process.env.VITE_GEMINI_API_KEY;
     if (key) {
-      setAiClient(new GoogleGenerativeAI(key));
+      setAiClient(new GoogleGenAI(key));
     }
   }, []);
 
